@@ -25,14 +25,12 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    /* background: whitesmoke; */
     padding: 8px 30px;
     transition: .3s;
 }
 header.sticky{
     background: rgb(59, 55, 55);
     padding: 13px 18%;
-    /* box-shadow: 0px 0px 10px rgb(0 0 0 / 10%); */
 }
 .navbar{
     display: flex;
@@ -54,6 +52,9 @@ header.sticky{
     color: rgb(156, 148, 148);
     cursor: pointer;
 }
+.Navbar__Link-toggle {
+    display: none;
+  }
 .btn{
     background-color:rgb(168, 52, 52);
     height:40px;
@@ -73,7 +74,6 @@ section{
 	background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('/static/pictures/background1.jpg');
 	background-size: cover;
 	background-position:center;
-	/* overflow: hidden; */
 }
 .heading h1{
     position: absolute;
@@ -122,22 +122,12 @@ section{
     min-height: 70vh;
     height: 100%;
     width: 100%;
-    /* background: url("pics/logo.jpg"); */
-    /* background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url("pics/logo.jpg"); */
-    /* background-size: cover; */
     background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
-    /* background-position: center; */
     position: relative;
-    /* display: grid; */
     align-items: center;
-    /* display: flex;
-    justify-content: space-between;
-    flex-direction: row; */
-
 }
 .about-special{
     display: flex;
-    /* flex-wrap: nowrap; */
     flex-direction: row;
     justify-content: space-between;
 }
@@ -148,13 +138,7 @@ section{
 }
 .about-side{
     padding-right: 80px;
-    /* width: 500px;
-    height: 500px; */
 }
-/* .logo1{
-    width: 120%;
-    height: 300px;
-} */
 .about-otherside{
     font-size: 30px;
     text-justify: auto;
@@ -165,39 +149,6 @@ section{
     font-size: 40px;
     font-weight: 600;
     color: rgb(168, 52, 52);
-}
-.services{
-    min-height: 70vh;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    /* align-items: center; */
-    background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
-}
-.services h2{
-    color: white;
-    font-size: 50px;
-    padding-bottom: 30px;
-    text-align: center;
-}
-.pic{
-    width: 500px;
-    height: 400px;
-}
-.picture{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
-    grid-gap: 3rem;
-    /* border-radius: 20px; */
-}
-.pictures h4{
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    font-size: 25px;
-}
-.pictures:hover{
-    transform:perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05,1.05,1.05);
 }
 .general1 h2{
     font-size: 50px;
@@ -224,8 +175,6 @@ section{
     width: 250px;
     height: 300px;
     position: absolute;
-    /* top: -20px; */
-    /* left: 870px; */
 }
 .group input{
     width: 500px;
@@ -277,6 +226,7 @@ section{
     transition: all 0.4s;
     padding-top: 15px;
     padding-left: 3px;
+    margin-right: 17px;
   }
   
   .scroll-top i {
@@ -328,11 +278,66 @@ footer p{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* text-align: center; */
     background: white;
     border-radius: 50%;
     margin: 0px 70px;
-    /* padding-left: 10px; */
 }
 
-
+@media (max-width: 576px) {
+    header{
+        display: flex;
+        padding: 5px;
+        position: absolute;
+        justify-content: space-between;
+    }
+    header.sticky{
+        padding: 0;
+    }
+    .Navbar__Items {
+        display:none;
+      }
+    .btn{
+        margin-right: 100%;
+    }
+    .home{
+        background-position: right;
+    }
+    .heading h1{
+        left: 5%;
+        font-size: 30px;
+    }
+    .heading p{
+        top: 54%;
+        left: 5%;
+        font-size: 15px;
+    }
+    .button{
+        height:55px;
+        width:120px;
+        top:65%;
+        left:18%;
+    }
+    .button1{
+        height:55px;
+        width:120px;
+        top:65%;
+        left:52%;
+    }
+    .about{
+        display: flex;
+        justify-content: center;
+    }
+    .about-side{
+        display: none;
+    }
+    .about-otherside{
+        font-size: 27px;
+        padding-left: 0px;
+    }
+    .group input{
+        width: 350px;
+    }
+    .group textarea{
+        width: 350px;
+    }
+}

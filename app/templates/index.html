@@ -16,14 +16,21 @@
                 <a href="#" class="logo"><img src="{{ url_for('static', filename='pictures/logo.jpg')}}" alt="LOGO"></a>
             </div>
 
+            <div class="navbar Navbar__Link-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <nav class="navbar">
-                <ul>
+                <ul class="Navbar__Items">
                     <li><a href="{{url_for('home') }}">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#touch">Contact</a></li>
-                    <li><a href="{{url_for('registration') }}"><button class="btn">Sign In</button></a></li>
+                    <!-- <li><a href="{{url_for('registration') }}"><button class="btn">Sign In</button></a></li> -->
                 </ul>
+                <div>
+                    <li><a href="{{url_for('registration') }}"><button class="btn">Sign In</button></a></li>
+                </div>
             </nav>
         </header>
         <section class="home" >
@@ -54,29 +61,6 @@
                             and help about Blood pressure, Body Glucose, Body weigth, Heart Rate and Body temperature.
                         </p>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="services" id="services">
-            <div>
-                <h2>Our Services</h2>
-            </div>
-            <div class="picture">
-                <div class="pictures">
-                    <div class="img"><a href=""><img src="{{ url_for('static', filename='pictures/pressure.jpg')}}" class="pic" alt="pressure"></a></div>
-                    <h4>BLOOD PRESSURE</h4>
-                </div>
-                <div class="pictures">
-                    <div class="img"><a href=""><img src="{{ url_for('static', filename='pictures/sugar.jpg')}}" class="pic" alt="sugar" ></a></div>
-                    <h4>BODY GLUCOSE</h4>
-                </div>
-                <div class="pictures">
-                    <div class="img"><a href=""><img src="{{ url_for('static', filename='pictures/weight.jpg')}}" class="pic" alt="weight" ></a></div>
-                    <h4>BODY WEIGHT</h4>
-                </div>
-                <div class="pictures">
-                    <div class="img"><a href=""><img src="{{ url_for('static', filename='pictures/temperature.jpg')}}" class="pic" alt="temperature" ></a></div>
-                    <h4>BODY TEMPERATURE</h4>
                 </div>
             </div>
         </section>

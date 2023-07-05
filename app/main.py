@@ -79,10 +79,12 @@ def run_prediction():
         BMIVerdict = calc.categorize(bmi)
         DiabetesVerdict = AI.classify(model_input)
 
-        return {
-                "BMIVerdict" : json.dumps(BMIVerdict.__dict__),
-                "DiabetesVerdict" : json.dumps(DiabetesVerdict.__dict__)
-            }
+        # return {
+        #         "BMIVerdict" : json.dumps(BMIVerdict.__dict__),
+        #         "DiabetesVerdict" : json.dumps(DiabetesVerdict.__dict__)
+        #     }
+
+        return render_template("verdict.html", BMIVerdict=BMIVerdict, DiabetesVerdict=DiabetesVerdict)
 
     return render_template("status.html")
 

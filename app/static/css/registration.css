@@ -8,7 +8,7 @@
 .fullpage{
     height: 100%;
     width: 100%;
-    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/static/pictures/background2.jpg');
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/static/pictures/background2.jpg') ;
     /* background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('/static/pictures/background1.jpg'); */
     background-position: center;
     background-size: cover;
@@ -63,6 +63,16 @@ header.sticky{
     color: rgb(156, 148, 148);
     cursor: pointer;
 }
+.btn{
+    background-color:rgb(168, 52, 52);
+    height:40px;
+    width:80px;
+    border-radius: 5px;
+    color: white;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
 .loginbtn{
     background-color:rgb(168, 52, 52);
     height:40px;
@@ -73,14 +83,11 @@ header.sticky{
 .loginbtn:hover{
     transform: scale(1.1);
 }
-/* #login-form{
-    display: none;
-} */
 .form-box{
     width: 380px;
     height: 480px;
     position: relative;
-    margin: 8% auto;
+    margin: 30% auto;
     background: rgba(0,0,0,0.3);
     padding: 10px;
     overflow: hidden;
@@ -168,5 +175,10 @@ span{
 #register input{
     color: white;
     font-size: 15;
+}
+@media (max-width: 576px) {
+    .fullpage{
+        background-position: right;
+    }
 }
  
